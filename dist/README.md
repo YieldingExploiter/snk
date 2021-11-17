@@ -3,4 +3,4 @@
 
 The repository containing the images for the snek eating my contributions.<br/>
 Forked from [YieldingExploiter/snk](https://github.com/YieldingExploiter/snk).<br/>
-This repository contains **contributions for a bot account**, most of which were made **automatically**!
+This snake eating image contains **contributions for a bot account**, most of which were made **automatically**!
