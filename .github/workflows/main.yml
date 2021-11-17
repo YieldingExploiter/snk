@@ -35,4 +35,5 @@ jobs:
           repo: YieldingCoder/snk-img
         env:
           GH_PAT: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
