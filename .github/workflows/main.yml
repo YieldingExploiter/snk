@@ -21,27 +21,25 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@master
         with:
           persist-credentials: false
           ref: main
-      - name: generate github-contribution-grid-snake.svg
+      - name: Generate Images
         uses: Platane/snk@master
         with:
           github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-contribution-grid-snake.svg
           gif_out_path: dist/github-contribution-grid-snake.gif
-      - name: Configure Git Credentials
-        run: |
-          git config --local user.email "94558721+YieldingBot@users.noreply.github.com"
-          git config --local user.name "YieldingBot[BOT]"
-      - name: push snake to the output branch
+      - name: Push Snake to https://github.com/YieldingExploiter/snk-img/
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: main
           build_dir: dist
           repo: YieldingExploiter/snk-img
+          committer: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
+          author: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
         env:
           GH_PAT: ${{ secrets.PAT_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
