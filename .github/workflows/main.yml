@@ -32,12 +32,12 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-contribution-grid-snake.svg
           gif_out_path: dist/github-contribution-grid-snake.gif
-      - name: Push Snake to https://github.com/YieldingExploiter/snk-img/
+      - name: Push Snake
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
-          target_branch: main
+          target_branch: gh-pages
           build_dir: dist
-          repo: YieldingExploiter/snk-img
+          repo: YieldingBot/snk
           committer: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
           author: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
         env:
