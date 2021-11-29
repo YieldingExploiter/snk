@@ -3,7 +3,7 @@ name: Generate Snake
 on:
   # run automatically every 3 hours
   schedule:
-    - cron: "0 */3 * * *" 
+    - cron: "0 */1 * * *" 
   
   # allows to manually run the job at any time
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
       - name: Generate Images
         uses: MokiyCodes/snk-action@master
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: YieldingBot
           svg_out_path: dist/github-contribution-grid-snake.svg
           gif_out_path: dist/github-contribution-grid-snake.gif
       - name: Push Snake
@@ -38,8 +38,8 @@ jobs:
           target_branch: gh-pages
           build_dir: dist
           repo: YieldingBot/snk
-          committer: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
-          author: 'YieldingBot[BOT] <94558721+YieldingBot@users.noreply.github.com>'
+          committer: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
+          author: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
         env:
           GH_PAT: ${{ secrets.PAT_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
