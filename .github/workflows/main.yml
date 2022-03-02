@@ -1,7 +1,7 @@
 name: Generate Snake
 
 on:
-  # run automatically every 3 hours
+  # run automatically every hour
   schedule:
     - cron: "0 */1 * * *" 
   
