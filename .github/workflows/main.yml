@@ -29,7 +29,7 @@ jobs:
       - name: Generate Images
         uses: MokiyCodes/snk-action@master
         with:
-          github_user_name: YieldingBot
+          github_user_name: YieldingExploiter
           svg_out_path: dist/github-contribution-grid-snake.svg
           gif_out_path: dist/github-contribution-grid-snake.gif
       - name: Push Snake
@@ -37,7 +37,7 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: dist
-          repo: YieldingBot/snk
+          repo: YieldingExploiter/snk
           committer: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
           author: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
         env:
