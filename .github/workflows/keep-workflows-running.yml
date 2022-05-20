@@ -1,0 +1,33 @@
+name: Keep the Lights On
+
+on:
+  # run automatically every hour
+  schedule:
+    - cron: "0 */1 * * *" 
+  
+  # allows to manually run the job at any time
+  workflow_dispatch:
+ 
+  
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: main
+      - name: Update Repo
+        run: date > ignore-me.txt
+      - name: Add Files
+        run: git add .
+      - name: Commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m "chore: Ensure Workflows continue running"
+      - name: Push
+        run: git push
