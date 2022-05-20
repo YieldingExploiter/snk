@@ -38,8 +38,8 @@ jobs:
           target_branch: gh-pages
           build_dir: dist
           repo: YieldingExploiter/snk
-          committer: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
-          author: 'YieldingBot <94558721+YieldingBot@users.noreply.github.com>'
+          committer: 'YieldingExploiter <94558721+YieldingExploiter@users.noreply.github.com>'
+          author: 'YieldingExploiter <94558721+YieldingExploiter@users.noreply.github.com>'
         env:
           GH_PAT: ${{ secrets.PAT_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
