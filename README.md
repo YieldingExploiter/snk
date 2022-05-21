@@ -1,1 +1,1 @@
-![](https://YieldingExploiter.github.io/snk/github-contribution-grid-snake.svg)
+![](https://YieldingExploiter.github.io/snk/github-contribution-grid-snake.svg?)
